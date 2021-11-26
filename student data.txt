@@ -1,0 +1,1829 @@
+#include<stdio.h>
+#include<conio.h>
+using namespace std;
+#include<iostream>
+#include<string.h>
+
+char wish,input,i;
+
+class person
+{
+protected:
+	int sub1,sub2,sub3;
+	float av;
+	char ress[50],fname[20],mname[20],lname[20],mail[30],prn[20];
+public:
+	unsigned int mobile;
+
+	void mob()
+	{
+	cout<<"\n\t Enter Mobile Number = ";
+	cin>>mobile;
+	}
+
+	void address()
+	{
+	cout<<"\n\t Enter your Address = ";
+	gets(ress);
+	}
+
+	void  namef()
+	{
+	cout<<"\n\n\t Enter First Name = ";
+	gets(fname);
+	}
+
+	void  names()
+	{
+	cout<<"\n\t Enter Middle Name = ";
+	gets(mname);
+	}
+
+	void  namet()
+	{
+	cout<<"\n\t Enter Last Name = ";
+	gets(lname);
+	}
+
+	void email()
+	{
+	cout<<"\n\t Enter Email ID = ";
+	cin>>mail;
+	}
+
+};
+
+class student:public person
+{
+protected:
+
+public:
+
+	void sb1()
+	{
+	cout<<"\n\t Enter Subject 1 Marks = ";
+	cin>>sub1;
+	}
+
+	void sb2()
+	{
+	cout<<"\n\t Enter Subject 2 Marks = ";
+	cin>>sub2;
+	}
+
+	void sb3()
+	{
+	cout<<"\n\t Enter Subject 3 Marks = ";
+	cin>>sub3;
+	}
+
+	void PRN()
+	{
+	cout<<"\n\t Enter your PRN number = ";
+	cin>>prn;
+	}
+
+	void avg()
+	{
+	av=(sub1+sub2+sub3)/300.0;
+	cout<<"\n\n\t Percentage = "<<av*100<<" %";
+	}
+
+	void tot()
+	{
+	cout<<"\n\n\t Total Marks = "<<sub1+sub2+sub3<<" / 300";
+	}
+
+	void pdetails()
+	{
+		//clrscr();
+		cout<<"\n\t==========Student Record============ ";
+		cout<<"\n\n\t Name = "<<fname<<" "<<mname<<" "<<lname;
+		cout<<"\n\n\t Mobile Number = "<<mobile;
+		cout<<"\n\n\t PRN number = "<<prn;
+		cout<<"\n\n\t Email ID = "<<mail;
+		cout<<"\n\n\t Subject 1 Marks = "<<sub1;
+		cout<<"\n\n\t Subject 2 Marks = "<<sub2;
+		cout<<"\n\n\t Subject 3 Marks = "<<sub3;
+		avg();
+		tot();
+		
+	}
+};
+
+
+class fybsc:public student
+{
+public:
+
+}p1[10];
+
+class sybsc:public student
+{
+public:
+
+}p2[10];
+
+class tybsc:public student
+{
+public:
+
+}p3[10];
+
+class fybca:public student
+{
+public:
+
+}p4[10];
+
+class sybca:public student
+{
+public:
+
+}p5[10];
+
+class tybca:public student
+{
+public:
+
+}p6[10];
+
+class fyeng:public student
+{
+public:
+
+}p7[10];
+
+class byeng:public student
+{
+public:
+
+}p8[10];
+
+class tyeng:public student
+{
+public:
+
+}p9[10];
+
+	void menu()
+	{
+			cout<<"\n\t1. Insert Recod";
+			cout<<"\n\t2. View";
+			cout<<"\n\t3. Edit";
+			cout<<"\n\t4. Delete";
+			cout<<"\n\n\t Enter Your Choice = ";
+			cin>>input;
+	}
+
+	void edit()
+	{
+			cout<<"\n\t1. Edit First Name";
+			cout<<"\n\t2. Edit Middle Name ";
+			cout<<"\n\t3. Edit Last Name ";
+			cout<<"\n\t4. Edit Mobile No ";
+			cout<<"\n\t5. Edit PRN No ";
+			cout<<"\n\t6. Edit Email Id ";
+			cout<<"\n\t7. Edit your Address";
+			cout<<"\n\t8. Edit Subject 1 Marks ";
+			cout<<"\n\t9. Edit Subject 2 Marks";
+			cout<<"\n\t0. Edit Subject 3 Marks ";
+			cout<<"\n\n\t Enter Your Choice = ";
+	}
+
+	void rol()
+	{
+	//clrscr();
+	cout<<"\n\tEnter Roll No of Student = ";
+	cin>>i;
+	}
+
+	//main
+
+
+int  main()
+{
+//clrscr();
+do
+{
+	main:
+	//clrscr();
+	cout<<"\n\t===========Short-Cut Keys================";
+	cout<<"\n\tExit=E";
+	cout<<"\n\t=========================================\n\n";
+	cout<<"\n\t=========================================";
+	cout<<"\n\t\t* MAIN MENU *";
+	cout<<"\n\t=========================================";
+	cout<<"\n\t  1. Student";
+	cout<<"\n\t  2. Employee ";
+	cout<<"\n\n\t  Enter Your Choice = ";
+	cin>>input;
+	switch(input)
+	{
+	case '1':	do{		//close before employee menu
+		stud:
+		//clrscr();
+		cout<<"\n\t===========Short-Cut Keys================";
+		cout<<"\n\t Main=M , Exit=E";
+		cout<<"\n\t=========================================\n\n";
+		cout<<"\n\t=====================================";
+		cout<<"\n\t student";
+		cout<<"\n\t=====================================";
+		cout<<"\n\t1. BSC";
+		cout<<"\n\t2. BCA";
+		cout<<"\n\t3. Engineering";
+		cout<<"\n\n\t Enter Your Choice = ";
+		cin>>input;
+		switch(input)
+		{
+//BSC
+		case '1':  do{	//close before bca menu
+		bsc:
+		//clrscr();
+		cout<<"\n\t===========Short-Cut Keys================";
+		cout<<"\n\t student=S , Main=M , Exit=E";
+		cout<<"\n\t=========================================\n\n";
+		cout<<"\n\t============================";
+		cout<<"\n\t* BSC *";
+		cout<<"\n\t============================";
+		cout<<"\n\t1. FY Bsc";
+		cout<<"\n\t2. SY Bsc";
+		cout<<"\n\t3. TY Bsc";
+		cout<<"\n\n\t Enter Your Choice = ";
+		cin>>input;
+		switch(input)
+			{
+
+			case '1':do{
+			fy:
+			//clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , Bsc=B , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  FY Bsc Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			    {
+				case  '1':
+				//clrscr();
+				rol();
+				p1[i].namef();
+				p1[i].names();
+				p1[i].namet();
+				p1[i].email();
+				p1[i].mob();
+				p1[i].PRN();
+				p1[i].address();
+				p1[i].sb1();
+				p1[i].sb2();
+				p1[i].sb3();
+				cout<<"\n\n\t=========================================";
+				cout<<"\n\n\t Prerss Enter To Save...";
+				getch();break;
+
+				case  '2':
+				rol();
+				p1[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+
+				do
+				 {
+				fybsced:
+				//clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";
+				cout<<"\n\t student=S , Bsc=B , FY Bsc=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * FY Bsc Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				//clrscr();
+				p1[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				//clrscr();
+				p1[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				//clrscr();
+				p1[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				//clrscr();
+				p1[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				//clrscr();
+				p1[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				//clrscr();
+				p1[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				//clrscr();
+				p1[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				//clrscr();
+				p1[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				//clrscr();
+				p1[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				//clrscr();
+				p1[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case 'f': goto fy;
+				case 'F': goto fy;
+				case 'B': goto bsc;
+				case 'b': goto bsc;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto fybsced;
+				}
+
+				cout<<"\n\n\t Press Y to go to Fy Bsc Edit Menu OR\n\t Press N to go to Fy Bsc Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto fy;
+
+				case '4':
+
+				//clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p1[i].mobile=0;
+				goto fy;
+				}
+				else
+				goto fy;
+
+				case 'B': goto bsc;
+				case 'b': goto bsc;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto fy;
+			    }
+			cout<<"\n\n\t Press Y to go to Fy Bsc Menu  OR\n\t Press N to go to BSC Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto bsc;
+
+
+			case '2':do{
+			sy:
+			//clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , Bsc=B , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  SY Bsc Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			    {
+				case  '1':
+				rol();
+				//clrscr();
+				p2[i].namef();
+				p2[i].names();
+				p2[i].namet();
+				p2[i].email();
+				p2[i].mob();
+				p2[i].PRN();
+				p2[i].address();
+				p2[i].sb1();
+				p2[i].sb2();
+				p2[i].sb3();
+				cout<<"\n\n\t=========================================";
+				cout<<"\n\n\t Prerss Enter To Save...";
+					getch();break;
+
+				case  '2':
+				rol();
+				p2[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+				do
+				 {
+				sybsced:
+				//clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";
+				cout<<"\n\t student=S , Bsc=B , SY Bsc=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * SY Bsc Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				//clrscr();
+				p2[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				//clrscr();
+				p2[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				//clrscr();
+				p2[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				//clrscr();
+				p2[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				//clrscr();
+				p2[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				//clrscr();
+				p2[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				//clrscr();
+				p2[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				//clrscr();
+				p2[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				//clrscr();
+				p2[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				//clrscr();
+				p2[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case 'f': goto sy;
+				case 'F': goto sy;
+				case 'B': goto bsc;
+				case 'b': goto bsc;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto sybsced;
+				}
+
+				cout<<"\n\n\t Press Y to go to Sy Bsc Edit Menu OR\n\t Press N to go to Sy Bsc Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto sy;
+
+				case '4':
+				//clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p2[i].mobile=0;
+				goto sy;
+				}
+				else
+				goto sy;
+
+				case 'B': goto bsc;
+				case 'b': goto bsc;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto sy;
+			    }
+			cout<<"\n\n\t Press Y to go to Sy Bsc Menu  OR\n\t Press N to go to BSC Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto bsc;
+
+
+			case '3':do{
+			ty:
+			//clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , Bsc=B , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  TY Bsc Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			{
+				case  '1':
+				rol();
+				//clrscr();
+				p3[i].namef();
+				p3[i].names();
+				p3[i].namet();
+				p3[i].email();
+				p3[i].mob();
+				p3[i].PRN();
+				p3[i].address();
+				p3[i].sb1();
+				p3[i].sb2();
+				p3[i].sb3();
+				cout<<"\n\n\t=========================================";
+				cout<<"\n\n\t Prerss Enter To Save...";
+					getch();break;
+
+
+				case  '2':
+				rol();
+				p3[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+				do
+				 {
+				tybsced:
+				//clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";
+				cout<<"\n\t student=S , Bsc=B , FY Bsc=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * TY Bsc Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				//clrscr();
+				p3[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				//clrscr();
+				p3[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				//clrscr();
+				p3[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				//clrscr();
+				p3[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				//clrscr();
+				p3[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				//clrscr();
+				p3[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				//clrscr();
+				p3[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				//clrscr();
+				p3[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				//clrscr();
+				p3[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				//clrscr();
+				p3[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case 'f': goto ty;
+				case 'F': goto ty;
+				case 'B': goto bsc;
+				case 'b': goto bsc;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto tybsced;
+				}
+
+				cout<<"\n\n\t Press Y to go to Ty Bsc Edit Menu OR\n\t Press N to go to Ty Bsc Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto ty;
+
+				case '4':
+
+				//clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p3[i].mobile=0;
+				goto ty;
+				}
+				else
+				goto ty;
+
+				case 'B': goto bsc;
+				case 'b': goto bsc;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";
+			    }
+			cout<<"\n\n\t Press Y to go to TY Bsc Menu  OR\n\t Press N to go to BSC Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto bsc;
+
+
+
+	     case 'S': goto stud;
+		 case 's': goto stud;
+		 case 'M': goto main;
+		 case 'm': goto main;
+		 case 'E': goto bottom;
+		 case 'e': goto bottom;
+		default:
+		cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto ty;
+   }
+
+			cout<<"\n\n\t Press Y to go to BSC  OR\n\t Press N to go to MAIN MENU = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+			goto main;
+// BCA
+		case '2':  do{
+		bca:
+		//clrscr();
+		cout<<"\n\t===========Short-Cut Keys================";
+		cout<<"\n\t student=S , Main=M , Exit=E";
+		cout<<"\n\t=========================================\n\n";
+		cout<<"\n\t============================";
+		cout<<"\n\t* BCA *";
+		cout<<"\n\t============================";
+		cout<<"\n\t1. FY BCA";
+		cout<<"\n\t2. SY BCA";
+		cout<<"\n\t3. TY BCA";
+		cout<<"\n\n\t Enter Your Choice = ";
+		cin>>input;
+		switch(input)
+			{
+
+			case '1':do{
+			fybca:
+			//clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , BCA=B , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  FY BCA Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			{
+			rol();
+			case  '1':
+			//clrscr();
+			p4[i].namef();
+			p4[i].names();
+			p4[i].namet();
+		                p4[i].email();
+		                p4[i].mob();
+			p4[i].PRN();
+		                p4[i].address();
+			p4[i].sb1();
+			p4[i].sb2();
+			p4[i].sb3();
+		                cout<<"\n\n\t=========================================";
+		                cout<<"\n\n\t Prerss Enter To Save...";
+				        getch();break;
+
+			
+				case  '2':
+				rol();
+				p4[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+				do
+			  	 {
+      		 		fybcaed:
+       				//clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";		
+				cout<<"\n\t student=S , Bca=B , FY Bca=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * FY Bca Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				//clrscr();
+				p4[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				//clrscr();
+				p4[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				//clrscr();
+				p4[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				//clrscr();
+				p4[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				//clrscr();
+				p4[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				//clrscr();
+				p4[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				//clrscr();
+				p4[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				//clrscr();
+				p4[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				//clrscr();
+				p4[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				//clrscr();
+				p4[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case 'f': goto fybca;
+				case 'F': goto fybca;
+				case 'B': goto bca;
+				case 'b': goto bca;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto fybcaed;
+				}
+
+				cout<<"\n\n\t Press Y to go to Fy Bca Edit Menu OR\n\t Press N to go to Fy Bca Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto fybca;
+
+				case '4':
+				//clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p4[i].mobile=0;
+				goto fybca;
+				}
+				else
+				goto fybca;
+
+				case 'B': goto bca;
+				case 'b': goto bca;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto fybca;
+			}
+			cout<<"\n\n\t Press Y to go to Fy Bca Menu  OR\n\t Press N to go to BCA Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto bca;
+
+			case '2':do{
+			sybca:
+			////clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , BCA=B , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  SY BCA Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			{
+				case  '1':
+				rol();
+				////clrscr();
+				p5[i].namef();
+				p5[i].names();
+				p5[i].namet();
+				p5[i].email();
+				p5[i].mob();
+				p5[i].PRN();
+				p5[i].address();
+				p5[i].sb1();
+				p5[i].sb2();
+				p5[i].sb3();
+				cout<<"\n\n\t=========================================";
+				cout<<"\n\n\t Prerss Enter To Save...";
+					getch();break;
+
+
+				case  '2':
+				rol();
+				p5[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+				do
+				 {
+				sybcaed:
+				////clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";
+				cout<<"\n\t student=S , Bca=B , SY Bca=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * SY Bca Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				////clrscr();
+				p5[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				////clrscr();
+				p5[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				////clrscr();
+				p5[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				////clrscr();
+				p5[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				////clrscr();
+				p5[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				////clrscr();
+				p5[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				////clrscr();
+				p5[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				////clrscr();
+				p5[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				////clrscr();
+				p5[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				////clrscr();
+				p5[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case 'f': goto sybca;
+				case 'F': goto sybca;
+				case 'B': goto bca;
+				case 'b': goto bca;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto sybcaed;
+				}
+
+				cout<<"\n\n\t Press Y to go to Sy Bca Edit Menu OR\n\t Press N to go to Sy Bca Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto sybca;
+
+				case '4': 
+				////clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p5[i].mobile=0;
+				goto sybca;
+				}
+				else
+				goto sybca;
+
+				case 'B': goto bca;
+				case 'b': goto bca;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto sybca;
+			}
+
+			cout<<"\n\n\t Press Y to go to Sy Bca Menu  OR\n\t Press N to go to BCA Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto bca;
+
+			case '3':do{
+			tybca:
+			////clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , BCA=B , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  TY BCA Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			{
+				case  '1':
+				rol();
+				////clrscr();
+				p6[i].namef();
+				p6[i].names();
+				p6[i].namet();
+				p6[i].email();
+				p6[i].mob();
+				p6[i].PRN();
+				p6[i].address();
+				p6[i].sb1();
+				p6[i].sb2();
+				p6[i].sb3();
+				cout<<"\n\n\t=========================================";
+				cout<<"\n\n\t Prerss Enter To Save...";
+					getch();break;
+
+
+				case  '2':
+				rol();
+				p6[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+				do
+				 {
+				tybcaed:
+				//clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";
+				cout<<"\n\t student=S , Bca=B , TY Bca=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * TY Bca Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				//clrscr();
+				p6[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				//clrscr();
+				p6[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				//clrscr();
+				p6[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				//clrscr();
+				p6[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				//clrscr();
+				p6[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				//clrscr();
+				p6[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				//clrscr();
+				p6[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				//clrscr();
+				p6[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				//clrscr();
+				p6[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				//clrscr();
+				p6[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case 'f': goto tybca;
+				case 'F': goto tybca;
+				case 'B': goto bca;
+				case 'b': goto bca;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto tybcaed;
+				}
+
+				cout<<"\n\n\t Press Y to go to Ty Bca Edit Menu OR\n\t Press N to go to Ty Bca Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto tybca;
+
+				case '4': 
+				//clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p6[i].mobile=0;
+				goto tybca;
+				}
+				else
+				goto tybca;
+
+				case 'B': goto bca;
+				case 'b': goto bca;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto bca;
+			}
+			cout<<"\n\n\t Press Y to go to Ty Bca Menu  OR\n\t Press N to go to BCA Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto bca;
+
+
+		 case 'S': goto stud;
+		 case 's': goto stud;
+		 case 'M': goto main;
+		 case 'm': goto main;
+		 case 'E': goto bottom;
+		 case 'e': goto bottom;
+		default:
+		cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto tybca;
+			}
+			cout<<"\n\n\t Press Y to go to BCA Menu OR\n\t Press N to go to MAIN MENU = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+			goto main;
+
+// Engineering
+		case '3':  do{
+		eng:
+		//clrscr();
+		cout<<"\n\t===========Short-Cut Keys================";
+		cout<<"\n\t student=S , Main=M , Exit=E";
+		cout<<"\n\t=========================================\n\n";
+		cout<<"\n\t============================";
+		cout<<"\n\t* Engineering *";
+		cout<<"\n\t============================";
+		cout<<"\n\t1. FY Engineering";
+		cout<<"\n\t2. SY Engineering";
+		cout<<"\n\t3. TY Engineering";
+		cout<<"\n\n\t Enter Your Choice = ";
+		cin>>input;
+		switch(input)
+			{
+
+			case '1':do{
+			fyeng:
+			//clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , Engineering=N , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  FY Engineering Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			{
+				case  '1':
+				rol();
+				//clrscr();
+				p7[i].namef();
+				p7[i].names();
+				p7[i].namet();
+				p7[i].email();
+				p7[i].mob();
+				p7[i].PRN();
+				p7[i].address();
+				p7[i].sb1();
+				p7[i].sb2();
+				p7[i].sb3();
+				cout<<"\n\n\t=========================================";
+				cout<<"\n\n\t Prerss Enter To Save...";
+					getch();break;
+
+
+				case  '2':
+				rol();
+				p7[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+				do
+				 {
+				fyenged:
+				//clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";
+				cout<<"\n\t student=S , Eng=B , FY Eng=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * FY Eng Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				//clrscr();
+				p7[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				//clrscr();
+				p7[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				//clrscr();
+				p7[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				//clrscr();
+				p7[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				//clrscr();
+				p7[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				//clrscr();
+				p7[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				//clrscr();
+				p7[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				//clrscr();
+				p7[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				//clrscr();
+				p7[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				//clrscr();
+				p7[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case 'f': goto fyeng;
+				case 'F': goto fyeng;
+				case 'B': goto eng;
+				case 'b': goto eng;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto fyenged;
+				}
+
+				cout<<"\n\n\t Press Y to go to Fy Engineering Edit Menu OR\n\t Press N to go to Fy Engineering Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto fyeng;
+
+				case '4': 
+				//clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p7[i].mobile=0;
+				goto fyeng;
+				}
+				else
+				goto fyeng;
+
+				case 'N': goto eng;
+				case 'n': goto eng;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto fyeng;
+			}
+			cout<<"\n\n\t Press Y to go to Fy Engineering Menu  OR\n\t Press N to go to Engineering Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto eng;
+
+
+			case '2':do{
+			syeng:
+			//clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , Engineering=N , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  SY Engineering Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			{
+				case  '1':
+				rol();
+				//clrscr();
+				p8[i].namef();
+				p8[i].names();
+				p8[i].namet();
+				p8[i].email();
+				p8[i].mob();
+				p8[i].PRN();
+				p8[i].address();
+				p8[i].sb1();
+				p8[i].sb2();
+				p8[i].sb3();
+				cout<<"\n\n\t=========================================";
+				cout<<"\n\n\t Prerss Enter To Save...";
+					getch();break;
+
+				case  '2':
+				rol();
+				p8[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+				do
+				 {
+				syenged:
+				//clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";
+				cout<<"\n\t student=S , Eng=B , SY Eng=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * SY Eng Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				//clrscr();
+				p8[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				//clrscr();
+				p8[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				//clrscr();
+				p8[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				//clrscr();
+				p8[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				//clrscr();
+				p8[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				//clrscr();
+				p8[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				//clrscr();
+				p8[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				//clrscr();
+				p8[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				//clrscr();
+				p8[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				//clrscr();
+				p8[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case 'f': goto syeng;
+				case 'F': goto syeng;
+				case 'B': goto eng;
+				case 'b': goto eng;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto syenged;
+				}
+
+				cout<<"\n\n\t Press Y to go to Sy Engineering Edit Menu OR\n\t Press N to go to Sy Engineering Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto syeng;
+
+				case '4': 
+				//clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p8[i].mobile=0;
+				goto syeng;
+				}
+				else
+				goto syeng;
+
+				case 'n': goto eng;
+				case 'N': goto eng;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto syeng;
+			}
+			cout<<"\n\n\t Press Y to go to Sy Engineering Menu  OR\n\t Press N to go to Engineering Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto eng;
+
+			case '3':do{
+			tyeng:
+			//clrscr();
+			cout<<"\n\t===========Short-Cut Keys================";
+			cout<<"\n\t student=S , Engineering=N , Main=M , Exit=E";
+			cout<<"\n\t=========================================\n\n";
+			cout<<"\n\t=====================================";
+			cout<<"\n\t *  TY Engineering Menu* ";
+			cout<<"\n\t=====================================";
+			menu();
+
+			switch(input)
+			{
+				case  '1':
+				rol();
+				//clrscr();
+				p9[i].namef();
+				p9[i].names();
+				p9[i].namet();
+				p9[i].email();
+				p9[i].mob();
+				p9[i].PRN();
+				p9[i].address();
+				p9[i].sb1();
+				p9[i].sb2();
+				p9[i].sb3();
+				cout<<"\n\n\t=========================================";
+				cout<<"\n\n\t Prerss Enter To Save...";
+				getch();break;
+
+
+				case  '2':
+				rol();
+				p9[i].pdetails();
+				getch();break;
+
+				case '3':
+				rol();
+				do
+				 {
+				tyenged:
+				//clrscr();
+				cout<<"\n\t================Short-Cut Keys==================";
+				cout<<"\n\t student=S , Eng=B , TY Eng=F , Main=M , Exit=E";
+				cout<<"\n\t================================================\n\n";
+				cout<<"\n\t=====================================";
+				cout<<"\n\t * TY Eng Edit Menu * ";
+				cout<<"\n\t=====================================";
+				edit();
+				cin>>input;
+				switch(input)
+				{
+				case '1':
+				//clrscr();
+				p9[i].namef();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '2':
+				//clrscr();
+				p9[i].names();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '3':
+				//clrscr();
+				p9[i].namet();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '4':
+				//clrscr();
+				p9[i].mob();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+				
+				case '5':
+				//clrscr();
+				p9[i].PRN();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;	
+
+				case '6':
+				//clrscr();
+				p9[i].email();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '7':
+				//clrscr();
+				p9[i].address();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case '8':
+				//clrscr();
+				p9[i].sb1();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+		
+				case '9':
+				//clrscr();
+				p9[i].sb2();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;				
+	
+				case '0':
+				//clrscr();
+				p9[i].sb3();
+				cout<<"\n\tPress Enter to Save... ";
+				getch();break;
+
+				case 'f': goto tyeng;
+				case 'F': goto tyeng;
+				case 'B': goto eng;
+				case 'b': goto eng;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();
+				goto tyenged;
+				}
+
+				cout<<"\n\n\t Press Y to go to Ty Engineering Edit Menu OR\n\t Press N to go to Ty Engineering Menu = ";
+				cin>>wish;
+				}while(wish=='y' ||wish=='Y');
+					goto tyeng;
+
+				case '4': 
+				//clrscr();
+				cout<<"\n\n\t Do You Really Want to Delete Data ?";
+				cout<<"\n\n\t Press Y to Delete OR\n\t Press N to Cancel = ";
+				cin>>wish;
+				if(wish=='y' || wish=='Y')
+				{
+				p9[i].mobile=0;
+				goto tyeng;
+				}
+				else
+				goto tyeng;
+
+				case 'n': goto eng;
+				case 'N': goto eng;
+				case 'M': goto main;
+				case 'm': goto main;
+				case 'E': goto bottom;
+				case 'e': goto bottom;
+				case 'S': goto stud;
+				case 's': goto stud;
+				default:
+				cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto tyeng;
+			}
+			cout<<"\n\n\t Press Y to go to Ty Engineering Menu  OR\n\t Press N to go to Engineering Menu = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+				goto eng;
+
+
+		 case 'S': goto stud;
+		 case 's': goto stud;
+		 case 'M': goto main;
+		 case 'm': goto main;
+		 case 'E': goto bottom;
+		 case 'e': goto bottom;
+		default:
+		cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto eng;
+			}
+			cout<<"\n\n\t Press Y to go to Engineering Menu  OR\n\t Press N to go to MAIN MENU = ";
+			cin>>wish;
+			  }while(wish=='y' ||wish=='Y');
+			goto main;
+
+	case 'M': goto main;
+	case 'm': goto main;
+	case 'E': goto bottom;
+	case 'e': goto bottom;
+	default:
+		cout<<"\n\t Invalid Option ... Enter Valid a Option.";getch();goto stud;
+
+		}
+			cout<<"\n\n\t Press Y to go to Student Menu OR\n\t Press N to go to MAIN MENU = ";
+			cin>>wish;
+		   }while(wish=='y' ||wish=='Y');
+		if(wish!='y' ||wish!='Y')
+			goto main;
+// Empoyee
+
+      case '2'://clrscr();
+		cout<<"\n\t~~~~~~~~Coming Soon~~~~~~~";
+		getch();
+		goto main;
+
+      case 'E': goto bottom;
+      case 'e': goto bottom;
+      default:cout<<"\n\t Invalid Option ... Enter a Valid Option.";getch();goto main;
+      }    //main case
+cout<<"\n\n\t Press Y to go to MAIN MENU Programs OR\n\t Press N to EXIT";
+cin>>wish;
+}while(wish=='y' || wish=='Y');   //main do while
+
+
+bottom:
+//clrscr();
+cout<<"\n\n\n\n\n\n\t\t\t\t THANK YOU";
+cout<<"\n\n\t\t\t    Enter any Key to Exit";
+getch();
+return 0;
+}
+
+     
